@@ -1,27 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {db} from '../../config/firebase';
-import {collection , getDocs } from "firebase/firestore/lite"
+import { useVanContext } from '../../Context/AppContextProvider';
 export const Van = () => {
-const [vanData , setVanData] = useState([])
-const vanLifeRef = collection(db,"van")
-const getVanData = async() => {
-  try{
-    const vanSnapShot = await getDocs(vanLifeRef) 
-    const dataArray = vanSnapShot.docs.map((doc) => ({
-        ...doc.data() ,
-        id:doc.id
-      })
-      )
-      setVanData( dataArray)
-    }
-  catch(err){
-    console.error(err)
-  }
-}
-  useEffect(()=> {
-    getVanData()
-  },[])
+const {vanData} = useVanContext()
   const vanElements = vanData.map(van => (
     <Link to={`/van/${van.id}`}>
         <div key={van.id} className="van-tile">

@@ -5,7 +5,6 @@ import { db } from '../../config/firebase'
 
 export const VanDetails = () => {
     const [van ,setVan] = useState(null)
-    console.log(van)
 const params = useParams()
 const getVan = async() => {
     const docRef =   doc(db,"van",params.id)
