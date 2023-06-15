@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import {db} from '../config/firebase';
+import {db} from '../../config/firebase';
 import {collection , getDocs } from "firebase/firestore/lite"
 export const Van = () => {
 const [vanData , setVanData] = useState([])
