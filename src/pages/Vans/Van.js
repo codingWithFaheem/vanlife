@@ -5,7 +5,7 @@ import { useVanContext } from '../../Context/AppContextProvider';
 export const Van = () => {
 const {vanData} = useVanContext()
   const vanElements = vanData.map(van => (
-    <Link to={`/van/${van.id}`}>
+    <Link to={`/vans/${van.id}`}>
         <div key={van.id} className="van-tile">
             <img src={van.imgUrl} alt="van"/>
         <div className="van-info">

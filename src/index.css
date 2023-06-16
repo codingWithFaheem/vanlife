@@ -71,16 +71,21 @@ header a:hover {
   border: 2px solid rgb(103, 155, 208);
 }
 /*** HOME PAGE ***/
-.home-container {
+.home{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("../public/images/home-hero.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 350px;
-  height: 90vh;
+  background-position: center center;
+  min-height: 550px;
+  height: 80vh;
+  padding: 45px 0px;
+
+}
+.home-container {
   color: white;
-  padding: 45px 23px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -95,16 +100,25 @@ header a:hover {
 .home-sec h1 {
   font-weight: 700;
   font-size: 2.9rem;
-  line-height: 42px;
+  line-height: 38px;
   padding: 0 20px 0 20px;
   
 
   
 }
+.home-sec .span-1{
+  color: #f3b081;
 
-.home-container p {
+}
+.home-sec span{
+  color: #FF8C38;
+}
+
+.home-sec p {
   line-height: 24px;
   padding: 0 40px 0 40px;
+  
+
 }
 
 .home-sec a {
@@ -112,7 +126,6 @@ header a:hover {
   text-decoration: none;
   background-color: #FF8C38;
   border: none;
-  margin-top: 27px;
   padding-block: .75rem;
   color: white;
   font-weight: 700;
@@ -395,36 +408,38 @@ footer {
     width: 1140px;
     margin: 0 auto;
   }
-
+.home{
+  width: 120;
+}
    .home-img{
     object-fit: contain;
-    width: 40%;
-    margin-bottom: 8rem;
+    width: 48%;
   } 
    .home-container {
-    width: 100%;
+    width:1200px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
   }
   .sec-2{
     width: 40%;
     height: 40vh;
   }
 .home-sec{
-      width: 40%;
+      width: 44%;
       display: flex;
       flex-direction: column;
       align-items: center;
    }
    .home-sec h1{
-      line-height: 60px;
+      line-height: 66px;
       font-size: 65px;
      
 
    }
    .home-sec p{
-    font-size: 26px;
+    font-size: 20px;
    }
    .home-sec  a{
     width: 40%;

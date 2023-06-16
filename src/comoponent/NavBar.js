@@ -9,7 +9,8 @@ export const NavBar = () => {
 }
   return (
     <header>
-    <Link className="site-logo" to="/">#VanLife</Link>
+    <Link className="site-logo" to="/"
+    >#VanLife</Link>
     <nav>
         <NavLink 
             to="/host"
