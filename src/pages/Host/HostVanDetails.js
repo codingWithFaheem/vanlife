@@ -53,7 +53,6 @@ export const HostVanDetails = () => {
                     {van.type}
                 </i>
                 <h3>{van.name}</h3>
-                <h4>${van.price}/day</h4>
             </div>
         </div>
         
@@ -75,7 +74,7 @@ export const HostVanDetails = () => {
                   </NavLink>
                   </nav>
 
-    <Outlet />
+    <Outlet context={[van]}/>
 
     </div>
 </section>

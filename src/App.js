@@ -6,6 +6,7 @@ import { HostLayout } from './comoponent/HostLayout';
 import { AppContextProvider } from './Context/AppContextProvider';
 
 function App() {
+
   return (
     <div className="App">
       <AppContextProvider>
@@ -24,7 +25,7 @@ function App() {
               <Route path='reviews' element={<Review />} />
              <Route path='vans/:id' element={<HostVanDetails/>}>
                 <Route index element = {<VanInfo  />} />
-                <Route path='priceing' element = {<VanPricing />} />
+                <Route path='pricing' element = {<VanPricing />} />
                 <Route path='photos' element = {<VanPhoto /> } />
 
              </Route>

@@ -235,7 +235,7 @@ header a:hover {
 }
 
 .van-type.rugged:hover, .van-type.rugged.selected {
-  background-color: #115E59;
+  background-color: #1a9189;
 }
 
 .van-type.luxury:hover, .van-type.luxury.selected {
