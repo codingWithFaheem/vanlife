@@ -12,13 +12,7 @@ export const NavBar = () => {
     <Link className="site-logo" to="/"
     >#VanLife</Link>
     <nav>
-        <NavLink 
-            to="/host"
-            end
-            style={({isActive}) => isActive ? activeStyles : null}
-        >
-            Host
-        </NavLink>
+        
         <NavLink 
             to="/about"
             style={({isActive}) => isActive ? activeStyles : null}
@@ -30,6 +24,13 @@ export const NavBar = () => {
             style={({isActive}) => isActive ? activeStyles : null}
         >
             Vans
+        </NavLink>
+        <NavLink 
+            to="/host"
+            end
+            style={({isActive}) => isActive ? activeStyles : null}
+        >
+            Host
         </NavLink>
     </nav>
 </header>

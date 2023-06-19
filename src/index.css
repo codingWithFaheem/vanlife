@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.font-1 {
+  font-family: 'Chakra Petch', sans-ser
+  
 }
 
 html, body {
@@ -63,7 +70,21 @@ header a:hover {
   cursor: pointer;
   transition: transform .1s ease-in-out;
 }
+.back-button {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-top: 60px;
+  margin-left: 26px;
+}
 
+.back-button span:hover {
+  text-decoration: underline;
+}
+
+.link-button:hover {
+  transform: translate(1px, 1px);
+}
 .link-button:hover {
   transform: translate(1px, 1px);
 }
@@ -143,7 +164,6 @@ header a:hover {
   object-fit: contain;
   width: 69%;
 }
-/*** ABOUT PAGE ***/
 .about-hero-image {
   max-width: 100%;
 }
@@ -182,27 +202,49 @@ header a:hover {
   border-radius: 10px;
 }
 
+.van-list-container {  
+  padding-inline: 23px ;
+  width: 1200px;
 
-/*** VAN PAGES ***/
-.van-list-container {
-  padding-inline: 23px
+  
 }
 .van-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   justify-items: center;
-  gap: 34px;
+  align-items: start;
+  gap: 3px;
   margin-top: 57px;
+  padding: 3rem 3rem;
 }
-.van-tile a {
-  color: #161616;
-  text-decoration: none;    
-}
+.van-tile{
+  margin-top: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  font-family: 'Chakra Petch', sans-ser ;
+  background-color: #f5c8a8;
+  border-radius: 40px;
+} 
 
+ 
 .van-tile img {
   max-width: 100%;
-  border-radius: 5px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+
 }
+
+.van-info{
+  height: 80px;
+  background-color: #f5be7b;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
 .van-list-container button {
   margin-right: 20px;
   cursor: pointer;
@@ -215,20 +257,21 @@ header a:hover {
   font-weight: 500;
   border: none;
   border-radius: 5px;
-  background-color: #FFEAD0;
-  color: #4D4D4D;
+  background-color: #f0bf83;
+  color: #2b1b1b;
+  font-size: bold;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
 .van-type:hover {
-  color: #FFEAD0;
-}
+  color: #fd9414;
+} 
 
 .van-type:focus {
   outline: none;
 }
 
 .van-type.selected {
-  color: #FFEAD0;
+  color: #f3c895;
 }
 .van-type.simple:hover, .van-type.simple.selected {
   background-color: #E17654;
@@ -266,49 +309,6 @@ i[class*='van-type-'] {
   text-decoration: none;
 }
 
-/* .van-detail-container .back-button:visited {
-  
-} */
-
-.van-detail-container .back-button span {
-  text-decoration: underline;
-}
-
-.van-detail {
-  display: flex;
-  flex-direction: column;
-  color: #161616;
-}
-
-.van-detail img {
-  border-radius: 5px;
-  margin-block: 47px;
-}
-
-.van-detail h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.van-detail > i {
-  align-self: flex-start;
-}
-
-.van-detail .van-price {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-.van-detail .van-price span {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.van-detail .link-button {
-  background-color: #FF8C38;
-  color: white;
-  font-size: 1.125rem;
-}
 .host-nav {
   display: flex;
 }
@@ -326,17 +326,6 @@ i[class*='van-type-'] {
   font-weight: 600;
 }
 
-footer {
-  background-color: #161616;
-  color: #AAAAAA;
-  height: 74px;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  margin-top: auto;
-  font-weight: 500;
-}
 .host-van-link-wrapper {
   color: unset;
   text-decoration: unset;
@@ -374,6 +363,7 @@ footer {
 .host-van-info p {
   margin-block: 10px;
 }
+
 .host-van-detail-layout-container {
   background-color: white;
   padding: 24px;
@@ -403,14 +393,279 @@ footer {
   margin-block: 0;
 }
 
+.host-van-detail-nav {
+  display: flex;
+  margin-block: 25px;
+}
+
+.host-van-detail-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px;
+}
+
+.host-van-detail-nav a:first-of-type {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 15px;
+  margin-left: -15px;
+}
+
+.host-van-detail-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.host-van-detail-info > h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+.host-van-detail-info > h4 > span {
+  font-weight: 500;
+}
+
+.host-van-price {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.host-van-price > span {
+  font-size: 16px;
+  color: #4D4D4D;
+}
+
+.host-van-detail-image {
+  height: 100px;
+  border-radius: 5px;
+}
+.host-van-detail-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px;
+}
+
+.host-van-detail-nav a:first-of-type {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 15px;
+  margin-left: -15px;
+}
+
+.host-van-detail-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.host-dashboard-earnings {
+  background-color: #ffead0;
+  padding: 37px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Chakra Petch', sans-ser
+
+}
+
+.host-dashboard-earnings > .info > h1 {
+  font-size: 36px;
+  color: #161616;
+  margin: 0;
+}
+
+.host-dashboard-earnings > .info > p {
+  color: #4d4d4d;
+}
+
+.host-dashboard-earnings > .info > p > span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-dashboard-earnings > .info > h2 {
+  margin: 0;
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+.host-dashboard-reviews {
+  background-color: #ffddb2;
+  padding: 25px 26px;
+  display: flex;
+  align-items: center;
+}
+
+.host-dashboard-reviews > h2 {
+  margin: 0;
+}
+
+.host-dashboard-reviews .star {
+  color: #ff8c38;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+.host-dashboard-reviews p {
+  margin-left: 5px;
+  font-size: 20px;
+  color: #4d4d4d;
+  margin-right: auto;
+}
+
+.host-dashboard-reviews p > span {
+  font-weight: bold;
+  color: #161616;
+}
+
+.host-dashboard-vans {
+  padding: 38px 26px;
+}
+
+.host-dashboard-vans > .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.host-dashboard-vans .host-vans-list {
+  padding-inline: 0;
+}
+.host-income {
+  padding-inline: 26px;
+  color: #161616;
+  font-family: 'Chakra Petch', sans-ser
+
+}
+
+.host-income > p {
+  color: #4d4d4d;
+}
+
+.host-income > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income > h2 {
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+img.graph {
+  width: 100%;
+  max-width: 500px;
+}
+
+.host-income .info-header > p {
+  color: #4d4d4d;
+}
+
+.host-income .info-header > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income .info-header > h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 60px;
+}
+
+.host-income .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 31px;
+  padding: 35px 29px;
+  border-radius: 6px;
+}
+.host-income .transaction > h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.host-income .transaction > p {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4d4d4d;
+}
+.host-reviews {
+  padding-inline: 26px;
+  color: #161616;
+  font-family: 'Chakra Petch', sans-ser
+
+}
+
+.host-reviews .top-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.host-reviews .top-text > h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.host-reviews .top-text > p {
+  margin: 0;
+  color: #4d4d4d;
+}
+
+.host-reviews .top-text > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-reviews > img {
+  margin-bottom: 36px;
+}
+
+.host-reviews .review {
+  margin-block: 25px;
+}
+
+.host-reviews .review .info {
+  display: flex;
+}
+
+.host-reviews .review .name {
+  color: #161616;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.host-reviews .review .date {
+  color: #8c8c8c;
+}
+
+.host-reviews hr {
+  background-color: #c7c7c7;
+  height: 1px;
+  border: 0;
+}
+
+.host-reviews .review-star {
+  color: #ff8c38;
+  margin-right: 5px;
+}
 @media screen and (min-width: 1242px) {
   header{
     width: 1140px;
     margin: 0 auto;
   }
-.home{
-  width: 120;
-}
+
    .home-img{
     object-fit: contain;
     width: 48%;
@@ -421,10 +676,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-  }
-  .sec-2{
-    width: 40%;
-    height: 40vh;
   }
 .home-sec{
       width: 44%;
@@ -444,6 +695,152 @@ footer {
    .home-sec  a{
     width: 40%;
    }
+   .van-list-container{
+    width: 1200px;
+    padding: 4rem 6rem ;
+    margin: 0 auto;
+   }
+   .van-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 57px;
+    
+   }
+   .van-tile{
+    width: 46%;
+    
+
   }
+
+  .van-tile a{
+    text-decoration: none;
+    color: #161616;
+
+  }
+  .van-tile img{
+    width: 100%;
+    height: 20%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+  }
+  .van-info{
+    padding: 8px 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+  
+  }
+  .van-detail-container {
+     width: 1200px;
+      pad:  4rem 6rem;
+      margin:  0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .van-detail{
+    
+     width: 68%;
+     height: 29rem;
+  display: flex;
+  margin-top: 4rem;
+  font-family: 'Chakra Petch', sans-ser ;
+  
+
+
+}
+.van-de1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 4rem 2rem;
+
+}
+
+.van-detail img{
+  width: 48%;
+
+     
+}
+.host-nav{
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding:  0 2rem;
+  }
+ 
+
+
+.host-vans-title{
+  font-family: 'Chakra Petch', sans-serf;
+  margin-top: 2rem;
+
+}
+  .host-vans-list{
+    width: 1200px;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 1rem;
+  padding:  2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  font-family: 'Chakra Petch', sans-ser
+
+  
+  }
+  .host-van-single{
+    width: 35vw;
+    display: flex;
+    padding: 4px 8px;
+  align-items: start;
+
+  }
+  .host-van-single img{
+    width:53%;
+    height: 18rem;
+  
+    
+  }
+
+  .host-van-detail-layout-container{
+    border:2px solid #123 ;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .host-dash{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+  }
+  .income-sec{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+  }
+ .income-sec .transactios{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .host-reviews{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+.host-reviews  .review {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 
   

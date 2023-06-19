@@ -39,13 +39,10 @@ export const HostVanDetails = () => {
   return (
     <section>
     <div className="host-van-detail-layout-container">
-        <NavLink to='/host/vans'
-          style={ activeStyles }
-        >
-                Back to Vans
-        </NavLink>
-        <div className="host-van-detail">
-            <img src={van.imgUrl} />
+       
+        <img className='host-van-detail-image' src={van.imgUrl} />
+        <div>
+       <div className="host-van-detail">
             <div className="host-van-detail-info-text">
                 <i
                     className={`van-type van-type-${van.type}`}
@@ -57,6 +54,7 @@ export const HostVanDetails = () => {
         </div>
         
           <nav className='host-van-detail-nav'>
+        
                 <NavLink to='details'
                  style={({isActive}) => isActive ? activeStyles : null}
                 >
@@ -73,7 +71,7 @@ export const HostVanDetails = () => {
                       Photos
                   </NavLink>
                   </nav>
-
+                  </div>
     <Outlet context={[van]}/>
 
     </div>

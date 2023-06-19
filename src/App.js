@@ -2,6 +2,7 @@ import './App.css';
 import {Routes ,Route} from 'react-router-dom' ;
 import {  Home ,About,Van, VanDetails,Dashboard,Income, HostVan,Review, HostVanDetails, VanInfo, VanPricing, VanPhoto } from './pages';
 import { Layout } from './comoponent';
+import NotFound from "./pages/NotFound"
 import { HostLayout } from './comoponent/HostLayout';
 import { AppContextProvider } from './Context/AppContextProvider';
 
@@ -29,7 +30,7 @@ function App() {
                 <Route path='photos' element = {<VanPhoto /> } />
 
              </Route>
-
+             <Route path="*" element={<NotFound />}/>
           </Route>
         </Route>
         </Routes>
