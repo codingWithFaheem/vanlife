@@ -20,7 +20,7 @@ export const Income = () => {
                 alt="Income graph"
             />
             <div className="info-header">
-                <h3>Your transactions (3)</h3>
+                <h3>Your transactions data is here(3)</h3>
                 <p>
                     Last <span>30 days</span>
                 </p>
