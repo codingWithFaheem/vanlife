@@ -11,9 +11,10 @@ function App() {
   return (
     <div className="App">
       <AppContextProvider>
+      <Home />
         <Routes>
           <Route path='/' element = {<Layout />}>
-           <Route index element={<Home />} />
+            
           <Route path='about' element={<About />} />
           <Route path='vans'>
             <Route index element={<Van />} />
