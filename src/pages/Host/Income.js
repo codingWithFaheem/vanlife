@@ -32,7 +32,7 @@ export const Income = () => {
                         <p>{item.date}</p>
                     </div>
                 ))}
-            </div>
+            </div>g
         </section>
     </div>
   )

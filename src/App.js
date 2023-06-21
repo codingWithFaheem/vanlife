@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes ,Route} from 'react-router-dom' ;
+import {Routes ,Route, Router} from 'react-router-dom' ;
 import {  Home ,About,Van, VanDetails,Dashboard,Income, HostVan,Review, HostVanDetails, VanInfo, VanPricing, VanPhoto } from './pages';
 import { Layout } from './comoponent';
 import NotFound from "./pages/NotFound"
@@ -11,10 +11,10 @@ function App() {
   return (
     <div className="App">
       <AppContextProvider>
-      <Home />
+        <Router>
         <Routes>
           <Route path='/' element = {<Layout />}>
-            
+           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='vans'>
             <Route index element={<Van />} />
@@ -35,6 +35,7 @@ function App() {
           </Route>
         </Route>
         </Routes>
+        </Router>
       </AppContextProvider>
     </div>
   );
